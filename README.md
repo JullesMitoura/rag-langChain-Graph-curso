@@ -1,7 +1,7 @@
 # RAG com LangChain e LangGraph
 
 Material do curso que vem depois de **Fundamentos de LangChain** e **Técnicas avançadas com LangGraph** na carreira de
-**Engenharia de Agentes de IA**. Em 4 módulos e 14h30, construímos o **Assistente de Conhecimento da TechNova**: um
+**Engenharia de Agentes de IA**. Em 4 módulos e 13 horas, construímos o **Assistente de Conhecimento da TechNova**: um
 assistente que responde com base nos documentos da loja (políticas, manuais de produtos, central de ajuda e perguntas
 frequentes), cita as fontes, admite quando não sabe, corrige a própria busca com um grafo LangGraph e é avaliado com
 métricas objetivas.
@@ -58,7 +58,7 @@ data/
   eval/questions.json      30 perguntas com resposta de referência e fontes esperadas
   store.db                 banco da loja (clientes, produtos, pedidos e itens)
   faiss_index/             índice vetorial (gerado por python -m src.rag.ingestion)
-notebooks/                 aulas (um notebook por aula) e exercícios com solução
+notebooks/                 aulas (um notebook por aula) e o projeto final
 src/
   config.py                variáveis de ambiente (settings) e logs
   models.py                get_llm() (Azure OpenAI ou Groq) e get_embeddings() (Azure OpenAI ou OpenAI)
@@ -127,19 +127,16 @@ A regra geral: **primeiro o conceito no notebook, depois o código do produto**.
 | | 3 | `01_03_vector_search` | 45 min | `rag/vectorstore.py` |
 | | 4 | `01_04_document_loading` | 45 min | `rag/ingestion.py` (carregar) |
 | | 5 | `01_05_chunking_and_indexing` | 1h15 | `rag/ingestion.py` (dividir e indexar) |
-| | 6 | `01_06_exercise_first_rag` (+ solução) | 45 min | exercício |
 | 02 · Recuperação e geração | 1 | `02_01_retrievers_and_filters` | 1 h | `rag/retrieval.py` (vetorial e filtros) |
 | | 2 | `02_02_hybrid_search_and_reranking` | 1h15 | `rag/retrieval.py` (BM25, RRF, reordenação) |
 | | 3 | `02_03_answers_with_citations` | 1 h | `rag/generation.py`, `prompts.py` |
-| | 4 | `02_04_exercise_question_answering` (+ solução) | 45 min | exercício |
 | 03 · RAG com LangGraph e avaliação | 1 | `03_01_rag_as_a_graph` | 45 min | `graph/corrective_rag.py` (estado) |
 | | 2 | `03_02_corrective_rag` | 1 h | `graph/corrective_rag.py` (grafo) |
 | | 3 | `03_03_agentic_rag` | 45 min | `graph/agent.py` |
 | | 4 | `03_04_retrieval_evaluation` | 45 min | `evaluation.py` (métricas) |
 | | 5 | `03_05_answer_evaluation_and_security` | 45 min | `evaluation.py` (juiz), filtros e prompts |
-| 04 · Projeto final | 1 | `04_01_final_project` (+ solução) | 1h30 | `app.py`, indexação incremental |
+| 04 · Projeto final | 1 | `04_01_final_project` | 1h30 | `app.py`, indexação incremental |
 
-Os exercícios têm uma versão com a solução (`..._solution.ipynb`).
 
 ## Observações
 
