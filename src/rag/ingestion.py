@@ -23,7 +23,7 @@
 
 Uso (a partir da raiz do projeto):
     python -m src.rag.ingestion                               # recria o índice de data/documents
-    python -m src.rag.ingestion data/new_documents --incremental
+    python -m src.rag.ingestion data/documents --incremental   # depois de mover os arquivos para a subpasta certa
 """
 
 import argparse
@@ -190,8 +190,8 @@ def load_folder(folder: str | Path | None = None, base: str | Path | None = None
     for file in files:
         try:
             documents.extend(load_file(file, base or root))
-        except Exception:  # noqa: BLE001 - um arquivo com problema não deve interromper a ingestão
-            logger.exception("Falha ao carregar | arquivo=%s", file)
+        except Exception as error:  # noqa: BLE001 - um arquivo com problema não deve interromper a ingestão
+            logger.warning("Falha ao carregar | arquivo=%s | erro=%s: %s", file.name, type(error).__name__, error)
     logger.info("Documentos carregados | arquivos=%s | documentos=%s", len(files), len(documents))
     return documents
 
@@ -290,7 +290,7 @@ def add_chunks(index: FAISS, chunks: list[Document]) -> int:
 
 def remove_source(index: FAISS, source: str) -> int:
     """Remove todos os trechos de uma fonte. Devolve quantos saíram."""
-    ids = [chunk_id for chunk_id, chunk in stored_chunks(index).items() if chunk.metadata.get("source") == source]
+    ids = [key for key, chunk in stored_chunks(index).items() if chunk.metadata.get("source") == source]
     if ids:
         index.delete(ids)
     logger.info("Trechos removidos | fonte=%s | removidos=%s", source, len(ids))

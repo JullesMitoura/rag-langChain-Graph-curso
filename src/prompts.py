@@ -117,7 +117,9 @@ JUDGE_PROMPT = ChatPromptTemplate.from_messages(
         (
             "system",
             "Você avalia respostas de um assistente de RAG. Seja rigoroso e objetivo.\n"
-            "- grounded: TODAS as afirmações da resposta estão apoiadas no contexto?\n"
+            "- grounded: TODAS as afirmações da resposta estão apoiadas no contexto? Admitir que não encontrou "
+            "a informação (inclusive oferecendo encaminhar a um atendente) não afirma nada sobre a loja e conta "
+            "como fundamentada.\n"
             "- correct: a resposta concorda com a resposta de referência? Se a referência diz que "
             "não há informação, a resposta correta é admitir que não encontrou.\n"
             "- complete: a resposta cobre o essencial da referência?",

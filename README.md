@@ -61,7 +61,7 @@ data/
 notebooks/                 aulas (um notebook por aula) e exercícios com solução
 src/
   config.py                variáveis de ambiente (settings) e logs
-  models.py                get_llm() e get_embeddings(): Azure OpenAI, OpenAI ou Groq
+  models.py                get_llm() (Azure OpenAI ou Groq) e get_embeddings() (Azure OpenAI ou OpenAI)
   database.py              leitura do banco da loja
   prompts.py               todos os prompts
   rag/
@@ -82,14 +82,14 @@ chaves de metadados seguem o padrão de mercado, em inglês.
 ## Como executar
 
 Pré-requisitos: Python 3.11+ e um recurso do **Azure OpenAI** com dois deployments, um de chat (padrão:
-`gpt-5.4-mini`) e um de embeddings (padrão: `text-embedding-3-large`). Também funciona com uma chave da OpenAI
-(`EMBEDDINGS_PROVIDER=openai`) e, para o chat, com a Groq (`LLM_PROVIDER=groq`).
+`gpt-5.4-mini`) e um de embeddings (padrão: `text-embedding-3-large`). Sem Azure: embeddings pela OpenAI
+(`EMBEDDINGS_PROVIDER=openai`) e chat pela Groq (`LLM_PROVIDER=groq`).
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env                 # e preencha as credenciais
+cp .env.example .env                 # Windows: copy .env.example .env; depois preencha as credenciais
 python -m src.rag.ingestion          # cria o índice FAISS (uma vez; custo baixo de embeddings)
 ```
 
@@ -147,9 +147,10 @@ Os exercícios têm uma versão com a solução (`..._solution.ipynb`).
   provedor de embeddings exige rodar a ingestão de novo (o arquivo `index_info.json` registra o modelo usado).
 - **FAISS e langchain-community**: a integração do FAISS vive no `langchain-community`, que está sendo
   descontinuado. O projeto isola essa dependência em `src/rag/vectorstore.py`.
-- **Busca padrão**: o `HybridRetriever` usa a busca híbrida por padrão porque ela acerta códigos e nomes exatos
-  (SKUs, cupons, "IPX7"). No conjunto de avaliação atual, com poucas perguntas desse tipo, a busca vetorial pura mede
-  melhor (taxa de acerto 0,962 contra 0,923): as aulas 02_02 e 03_04 discutem essa escolha com os números.
+- **Busca padrão**: o `HybridRetriever` usa a busca híbrida por padrão para não depender de uma só busca quando o
+  cliente cola códigos (SKUs, cupons, "IPX7"). No conjunto de avaliação atual a vetorial pura mede melhor (taxa de
+  acerto 0,962 contra 0,923) e, nas consultas com códigos, só o BM25 acertou todas: as aulas 2.2 e 3.4 discutem essa
+  escolha com os números.
 - **Segurança do índice**: `load_local` usa pickle; carregue somente índices criados por você.
 - **O `.env` tem prioridade** sobre as variáveis exportadas no terminal (`load_dotenv(override=True)`).
 - **Recomeçar as conversas**: apague `data/checkpoints.db`.

@@ -126,14 +126,14 @@ def main() -> None:
         state = get_graph().get_state({"configurable": {"thread_id": st.session_state.thread_id}})
         usage = (state.values or {}).get("usage") or add_usage()
         st.metric("Tokens na conversa", usage.get("total_tokens", 0))
-        if st.button("Nova conversa", use_container_width=True):
+        if st.button("Nova conversa", width="stretch"):
             st.session_state.thread_id = uuid.uuid4().hex
             st.session_state.history = []
             st.rerun()
         st.divider()
         st.caption("Perguntas para testar")
         for example in EXAMPLE_QUESTIONS:
-            if st.button(example, use_container_width=True):
+            if st.button(example, width="stretch"):
                 st.session_state.example_question = example
                 st.rerun()
 

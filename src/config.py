@@ -21,13 +21,16 @@ from typing import Literal
 
 from dotenv import load_dotenv
 from pydantic import SecretStr
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 load_dotenv(override=True)  # lê o .env e exporta para o ambiente, sobrescrevendo variáveis existentes
 
 
 class Settings(BaseSettings):
     """Variáveis de ambiente aceitas pela aplicação."""
+
+    # Variável vazia no .env (ex.: LLM_TEMPERATURE=) vira None, em vez de erro de validação.
+    model_config = SettingsConfigDict(env_parse_none_str="")
 
     # --- LLM de chat -------------------------------------------------------
     # Padrão: Azure OpenAI, o mesmo provedor dos embeddings.

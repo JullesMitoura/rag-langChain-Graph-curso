@@ -29,4 +29,5 @@ streamlit>=1.64,<2
 jupyter>=1.1,<2
 ipykernel>=6.29
 pandas>=2.2
+numpy>=2
 tiktoken>=0.8

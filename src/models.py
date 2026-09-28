@@ -18,9 +18,9 @@ que o criou. Trocar de modelo exige reindexar os documentos.
 
 Uso:
     from src.models import get_embeddings, get_llm, token_usage
-    resposta = get_llm().invoke("Olá!")
-    token_usage(resposta)  # {"input_tokens": 78, "output_tokens": 29, "total_tokens": 107, "calls": 1}
-    vetor = get_embeddings().embed_query("Qual o prazo de troca?")
+    response = get_llm().invoke("Olá!")
+    token_usage(response)  # {"input_tokens": 78, "output_tokens": 29, "total_tokens": 107, "calls": 1}
+    vector = get_embeddings().embed_query("Qual o prazo de troca?")
 """
 
 from functools import lru_cache
