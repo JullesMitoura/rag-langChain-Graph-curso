@@ -1,0 +1,31 @@
+# Ambiente Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Segredos: só o modelo de configuração vai para o repositório
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Gerados em execução: índice vetorial (python -m src.rag.ingestion) e conversas.
+data/faiss_index*/
+data/checkpoints*.db
+data/*.db-*
+
+# Logs
+*.log
+
+# Sistema e editores
+.DS_Store
+.vscode/
+.idea/
+.claude/

@@ -1,0 +1,270 @@
+[
+  {
+    "id": "q01",
+    "type": "fact",
+    "question": "Qual o valor mínimo da compra pra ter frete grátis?",
+    "reference_answer": "O frete é grátis para compras acima de R$ 299,00 na modalidade Normal, considerando o valor dos produtos após descontos e sem o frete. (A política arquivada de 2024, com R$ 199,00, não vale mais.)",
+    "expected_sources": [
+      "policies/shipping.md"
+    ]
+  },
+  {
+    "id": "q02",
+    "type": "fact",
+    "question": "Quanto tempo de garantia tem um notebook comprado na TechNova?",
+    "reference_answer": "12 meses contra defeitos de fabricação, contados a partir da data de entrega (já incluindo os 90 dias da garantia legal).",
+    "expected_sources": [
+      "policies/warranty.md"
+    ]
+  },
+  {
+    "id": "q03",
+    "type": "fact",
+    "question": "Em quantas vezes sem juros consigo parcelar o Notebook Nova Air 14?",
+    "reference_answer": "Em até 10x sem juros, porque a compra é acima de R$ 500,00: 10 parcelas de R$ 489,99 (preço de R$ 4.899,90).",
+    "expected_sources": [
+      "policies/payment.md"
+    ]
+  },
+  {
+    "id": "q04",
+    "type": "fact",
+    "question": "Liguei o Monitor Nova View 27 pelo HDMI e não aparece 165 Hz. Ele não chega a 165?",
+    "reference_answer": "Chega, mas só pela entrada DisplayPort 1.4. As entradas HDMI 2.0 vão até 144 Hz na resolução QHD.",
+    "expected_sources": [
+      "manuals/mn-001_nova_view_27.pdf"
+    ]
+  },
+  {
+    "id": "q05",
+    "type": "fact",
+    "question": "Quanto dura a bateria do Fone Nova Buds com o cancelamento de ruído ligado?",
+    "reference_answer": "Até 6 horas nos fones com o ANC ligado (8 horas com ANC desligado) e até 24 horas no total com as recargas do estojo, com ANC ligado.",
+    "expected_sources": [
+      "manuals/fn-001_nova_buds.pdf"
+    ]
+  },
+  {
+    "id": "q06",
+    "type": "fact",
+    "question": "Posso mergulhar a caixa de som Nova Boom? Até que profundidade?",
+    "reference_answer": "Sim, dentro da certificação IPX7: submersão em água doce até 1 m de profundidade por até 30 minutos, com a tampa da porta USB-C fechada.",
+    "expected_sources": [
+      "manuals/cx-001_nova_boom.pdf"
+    ]
+  },
+  {
+    "id": "q07",
+    "type": "fact",
+    "question": "De quantos watts é o carregamento rápido do Nova Mini e quanto tempo leva pra carregar metade?",
+    "reference_answer": "45 W. Vai de 0 a 50% em cerca de 20 minutos (carga completa em cerca de 55 minutos), com o carregador incluso.",
+    "expected_sources": [
+      "manuals/sm-004_nova_mini.pdf"
+    ]
+  },
+  {
+    "id": "q08",
+    "type": "fact",
+    "question": "Quantos pontos do Nova Pontos preciso ter pra trocar por desconto?",
+    "reference_answer": "O resgate mínimo é de 1.000 pontos, equivalentes a R$ 50,00. Cada 100 pontos valem R$ 5,00 e os pontos podem pagar até 30% do valor dos produtos do pedido.",
+    "expected_sources": [
+      "help_center/nova_pontos_loyalty_program.html"
+    ]
+  },
+  {
+    "id": "q09",
+    "type": "fact",
+    "question": "Vocês atendem com pessoa de verdade no sábado? Até que horas?",
+    "reference_answer": "Sim. No sábado há atendentes humanos no chat e no WhatsApp das 9h às 15h (horário de Brasília). O telefone 0800 funciona só de segunda a sexta, e aos domingos e feriados só há o assistente virtual.",
+    "expected_sources": [
+      "help_center/support_channels_and_hours.html"
+    ]
+  },
+  {
+    "id": "q10",
+    "type": "fact",
+    "question": "Tenho uma empresa e quero comprar 15 notebooks iguais. Consigo pelo site?",
+    "reference_answer": "Não pelo site: o limite é de 10 unidades por produto em cada pedido. Para quantidades maiores, é preciso pedir cotação à TechNova Empresas (empresas@technova.com.br), que responde em até 2 dias úteis.",
+    "expected_sources": [
+      "help_center/business_purchases.html"
+    ]
+  },
+  {
+    "id": "q11",
+    "type": "fact",
+    "question": "Vi que tem um cupom NOVA50 dando 50% de desconto em tudo. Ele funciona?",
+    "reference_answer": "Não. Não existe cupom NOVA50 na TechNova. Os cupons oficiais são divulgados só pelo e-mail cadastrado, pelo app e pelo site, nunca em avaliações de produtos. O cupom oficial de primeira compra é o BEMVINDO10.",
+    "expected_sources": [
+      "help_center/coupon_not_applied.html"
+    ]
+  },
+  {
+    "id": "q12",
+    "type": "fact",
+    "question": "O Smartphone Nova X é à prova d'água?",
+    "reference_answer": "Não. O Nova X não possui certificação de resistência à água, e danos por líquidos não são cobertos pela garantia.",
+    "expected_sources": [
+      "manuals/sm-001_nova_x.pdf"
+    ]
+  },
+  {
+    "id": "q13",
+    "type": "procedure",
+    "question": "Como faço pra rastrear meu pedido?",
+    "reference_answer": "Em Minha Conta > Meus Pedidos, abra o pedido e veja o campo Código de rastreio (enviado também por e-mail no despacho) e clique em Acompanhar entrega. O prefixo indica a transportadora (BR Correios, LG Loggi, JD Jadlog, TE Total Express). A primeira movimentação pode levar até 24 horas.",
+    "expected_sources": [
+      "help_center/track_order.html"
+    ]
+  },
+  {
+    "id": "q14",
+    "type": "procedure",
+    "question": "Quero devolver um produto pelos Correios. Como funciona o código de postagem?",
+    "reference_answer": "Abra a solicitação em Minha Conta > Meus Pedidos > Solicitar troca ou devolução; o código de postagem chega por e-mail e vale 10 dias corridos. Embale o produto na caixa original dentro de outra caixa, leve a qualquer agência dos Correios e poste sem pagar nada, guardando o comprovante. A análise leva até 5 dias úteis após a chegada ao centro de distribuição.",
+    "expected_sources": [
+      "help_center/return_shipping_code.html"
+    ]
+  },
+  {
+    "id": "q15",
+    "type": "procedure",
+    "question": "Meu fone parou de funcionar. Como aciono a garantia?",
+    "reference_answer": "Em Minha Conta > Meus Pedidos, selecione o pedido e clique em Acionar garantia (ou use o atendimento). Informe o número do pedido (obrigatório), descreva o problema, envie fotos ou vídeo e o número de série. Você recebe um código de postagem gratuito para enviar à assistência credenciada, que tem até 30 dias corridos para o reparo.",
+    "expected_sources": [
+      "help_center/warranty_claim_step_by_step.html"
+    ]
+  },
+  {
+    "id": "q16",
+    "type": "procedure",
+    "question": "Paguei o Pix faz um tempão e o pedido continua sem confirmar. O que eu faço?",
+    "reference_answer": "A confirmação costuma levar até 5 minutos. Se passarem 2 horas, não pague de novo: fale com o atendimento informando o número do pedido e enviando o comprovante com o ID da transação (código E2E).",
+    "expected_sources": [
+      "help_center/pix_not_confirmed.html"
+    ]
+  },
+  {
+    "id": "q17",
+    "type": "procedure",
+    "question": "A caixa chegou toda amassada e o produto veio quebrado. O que fazer?",
+    "reference_answer": "Se ainda não recebeu, recuse a entrega e peça ao entregador para anotar o motivo. Se já recebeu, registre a ocorrência em até 7 dias corridos pela solicitação em Minha Conta, com fotos da embalagem, da etiqueta e do produto, sem descartar a embalagem. A TechNova envia um produto novo sem custo ou faz o reembolso integral, incluindo o frete.",
+    "expected_sources": [
+      "help_center/damaged_product.html"
+    ]
+  },
+  {
+    "id": "q18",
+    "type": "procedure",
+    "question": "Como conecto o Nova Buds no meu celular pela primeira vez?",
+    "reference_answer": "Abra o estojo com os fones dentro e segure o botão do estojo por 3 segundos até o LED piscar branco. Depois, ative o Bluetooth do celular e selecione Nova Buds na lista.",
+    "expected_sources": [
+      "manuals/fn-001_nova_buds.pdf"
+    ]
+  },
+  {
+    "id": "q19",
+    "type": "procedure",
+    "question": "Coloquei o endereço errado no pedido. Dá pra mudar?",
+    "reference_answer": "Só enquanto o pedido estiver com status processando (antes do despacho). Peça pelo chat a um atendente humano, informando o número do pedido e o novo endereço completo; frete e prazo podem ser recalculados. Depois do despacho não é possível alterar.",
+    "expected_sources": [
+      "help_center/change_delivery_address.html"
+    ]
+  },
+  {
+    "id": "q20",
+    "type": "procedure",
+    "question": "Esqueci a senha da minha conta. Como recupero?",
+    "reference_answer": "Na tela de login, clique em Esqueci minha senha, informe o e-mail cadastrado e use o link recebido, válido por 1 hora, para criar uma nova senha. Após 5 tentativas erradas o login fica bloqueado por 30 minutos.",
+    "expected_sources": [
+      "help_center/reset_password.html"
+    ]
+  },
+  {
+    "id": "q21",
+    "type": "multi_document",
+    "question": "Comprei um Notebook Nova Air 14 há 40 dias e ele parou de ligar. Ainda consigo meu dinheiro de volta?",
+    "reference_answer": "O prazo de reembolso por desistência (30 dias) já passou, mas o defeito está dentro da garantia de 12 meses. Acione a garantia com o número do pedido; se a assistência não resolver em até 30 dias, você pode escolher troca, abatimento ou reembolso, que precisa da aprovação de um atendente humano.",
+    "expected_sources": [
+      "policies/refund.md",
+      "policies/warranty.md"
+    ]
+  },
+  {
+    "id": "q22",
+    "type": "multi_document",
+    "question": "Se eu comprar o Headset Nova Studio no boleto e pagar hoje, em quanto tempo chega em Curitiba e vou pagar frete?",
+    "reference_answer": "Não paga frete (compra acima de R$ 299,00). O boleto compensa em até 2 dias úteis após o pagamento e, por ser capital, a entrega Normal leva de 3 a 7 dias úteis contados a partir dessa confirmação.",
+    "expected_sources": [
+      "policies/payment.md",
+      "policies/shipping.md"
+    ]
+  },
+  {
+    "id": "q23",
+    "type": "multi_document",
+    "question": "Minha Nova Boom caiu na piscina com a tampinha do USB aberta e parou de funcionar. A garantia cobre?",
+    "reference_answer": "Não. A certificação IPX7 só protege com a tampa da porta USB-C fechada (água doce, até 1 m, até 30 minutos). A garantia só cobre líquidos dentro dos limites da certificação, então o dano com a tampa aberta não é coberto.",
+    "expected_sources": [
+      "manuals/cx-001_nova_boom.pdf",
+      "policies/warranty.md"
+    ]
+  },
+  {
+    "id": "q24",
+    "type": "multi_document",
+    "question": "Recebi meu Smartphone Nova X há duas semanas, nem usei, e quero trocar pelo Nova Mini. Como fica a diferença de preço?",
+    "reference_answer": "Pode trocar, pois está dentro dos 30 dias e sem uso, com acessórios e embalagem original (frete grátis, sujeito a estoque). Como o Nova Mini é mais barato, a diferença de R$ 900,00 é devolvida por estorno na forma de pagamento original.",
+    "expected_sources": [
+      "help_center/exchange_for_another_model.html",
+      "policies/exchange.md"
+    ]
+  },
+  {
+    "id": "q25",
+    "type": "multi_document",
+    "question": "Quero comprar só um Fone Nova Sport. Vou pagar frete? E dá pra parcelar no cartão?",
+    "reference_answer": "Sim, paga frete: o fone custa R$ 249,90, abaixo do mínimo de R$ 299,00 para frete grátis. No cartão, como a compra é de até R$ 500,00, pode ser à vista ou em até 3x sem juros de R$ 83,30.",
+    "expected_sources": [
+      "policies/shipping.md",
+      "policies/payment.md"
+    ]
+  },
+  {
+    "id": "q26",
+    "type": "multi_document",
+    "question": "É minha primeira compra. Posso usar o cupom BEMVINDO10 e ainda ganhar o desconto do Pix?",
+    "reference_answer": "Sim. O cupom acumula com o desconto de 5% do Pix (que vale só sobre os produtos, não sobre o frete). O BEMVINDO10 dá 10% de desconto, limitado a R$ 150,00, em compras acima de R$ 400,00, só na primeira compra. Só é permitido um cupom por pedido.",
+    "expected_sources": [
+      "help_center/coupon_not_applied.html",
+      "policies/payment.md"
+    ]
+  },
+  {
+    "id": "q27",
+    "type": "no_answer",
+    "question": "Vocês vendem garantia estendida? Quanto custa?",
+    "reference_answer": "Não há informação no acervo sobre garantia estendida. Os documentos só tratam da garantia de 12 meses contra defeitos de fabricação; o correto é dizer que não sabe e sugerir contato com o atendimento.",
+    "expected_sources": []
+  },
+  {
+    "id": "q28",
+    "type": "no_answer",
+    "question": "Qual é o modelo da placa de vídeo do Notebook Nova Gamer 16?",
+    "reference_answer": "Não há informação no acervo: não existe manual nem artigo sobre o Notebook Nova Gamer 16, então o modelo da placa de vídeo não pode ser informado.",
+    "expected_sources": []
+  },
+  {
+    "id": "q29",
+    "type": "no_answer",
+    "question": "A TechNova está contratando? Onde mando meu currículo?",
+    "reference_answer": "Não há informação no acervo sobre vagas de emprego ou envio de currículo.",
+    "expected_sources": []
+  },
+  {
+    "id": "q30",
+    "type": "no_answer",
+    "question": "Quando vai ser lançado o Smartphone Nova X 2?",
+    "reference_answer": "Não há informação no acervo sobre lançamentos futuros ou sobre um Smartphone Nova X 2.",
+    "expected_sources": []
+  }
+]

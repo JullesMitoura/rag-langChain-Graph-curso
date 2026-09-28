@@ -1,0 +1,32 @@
+# LangChain 1.x, LangGraph e integrações de modelos
+langchain>=1.4,<2
+langchain-core>=1.6,<2
+langchain-groq>=1.1,<2
+langchain-openai>=1.6,<2
+langchain-text-splitters>=1.1,<2
+langgraph>=1.2,<2
+langgraph-checkpoint-sqlite>=3.1,<4
+
+# Índice vetorial FAISS (a integração com o LangChain vive no langchain-community,
+# usado SOMENTE em src/rag/vectorstore.py)
+faiss-cpu>=1.9
+langchain-community>=0.4,<1
+
+# Leitura de documentos e busca lexical
+pypdf>=5
+beautifulsoup4>=4.12
+rank-bm25>=0.2
+
+# Configuração e validação
+pydantic>=2.12,<3
+pydantic-settings>=2.15,<3
+python-dotenv>=1.2,<2
+
+# Front-end
+streamlit>=1.64,<2
+
+# Notebooks
+jupyter>=1.1,<2
+ipykernel>=6.29
+pandas>=2.2
+tiktoken>=0.8
